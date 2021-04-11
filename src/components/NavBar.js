@@ -1,11 +1,21 @@
 import React from 'react'
 import {NavDropdown,Button,FormControl,Form,Nav,Navbar} from   'react-bootstrap'
-
+import {NavLink} from 'react-router-dom'
 const NavBar = () => {
     return (
         <>
             <Navbar bg="primary" expand="lg" variant="dark">
-            <Navbar.Brand href="#home">
+               <NavLink className="navbar-brand" to="/" exact>
+               <img
+                src="/HMSLOGO.png"
+                width="80"
+                height="50"
+                className="d-inline-block align-top"
+                alt="React Bootstrap logo"
+               />    
+                </NavLink> 
+
+            {/* <Navbar.Brand href="#home">
             <img
                 src="/HMSLOGO.png"
                 width="80"
@@ -14,14 +24,20 @@ const NavBar = () => {
                 alt="React Bootstrap logo"
               />
               
-             </Navbar.Brand>
+             </Navbar.Brand> */}
              
 
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
+                <NavLink className="nav-link" to="/" exact activeClassName=
+                "active">
+                    หนัาหลัก  
+                </NavLink>
+                <NavLink className="nav-link" to="/about" exact activeClassName=
+                "active">
+                    เกี่ยวกับเรา 
+                </NavLink>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
