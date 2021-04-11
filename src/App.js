@@ -1,20 +1,18 @@
-import Header from './components/Header';
-import Logo from './components/Logo';
-import Menu from './components/Menu';
-import Sidebar from './components/Sidebar';
-
+import React from 'react'
+import Footer from './components/Footer'
+import NavBar from './components/NavBar'
+import Homepage from './pages/Homepage'
 function App() {
   return (
-    <div >
-        <Logo />
-        <Header />
-        <hr/>
-        <Sidebar/>
-        <hr/>
-        <Menu/>
-        
-    </div>
-  );
+    <>
+      <NavBar/>
+      <Homepage/>
+      <Footer/>
+   
+
+    </>
+  )
 }
 
-export default App;
+export default App
+
